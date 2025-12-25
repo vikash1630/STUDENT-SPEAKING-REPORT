@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Speaking Assessment Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dark mode button will be injected via JS -->
+
+    <div class="container">
+
+        <h1>Speaking Assessment Report</h1>
+
+        <!-- Overall Score -->
+        <div class="overall">
+            <h2>Overall Score</h2>
+            <p id="overallScore">-- / 9</p>
+        </div>
+
+        <!-- Skill Scores -->
+        <div class="skills">
+            <div>
+                Pronunciation: <span id="pronunciation"></span>
+                <div class="bar"><div class="fill" id="pronBar"></div></div>
+            </div>
+
+            <div>
+                Fluency: <span id="fluency"></span>
+                <div class="bar"><div class="fill" id="fluencyBar"></div></div>
+            </div>
+
+            <div>
+                Vocabulary: <span id="vocabulary"></span>
+                <div class="bar"><div class="fill" id="vocabBar"></div></div>
+            </div>
+
+            <div>
+                Grammar: <span id="grammar"></span>
+                <div class="bar"><div class="fill" id="grammarBar"></div></div>
+            </div>
+        </div>
+
+        <!-- Feedback -->
+        <div class="feedback">
+            <h2>Descriptive Feedback</h2>
+            <p id="feedbackText"></p>
+        </div>
+
+        <!-- Controls -->
+        <div>
+            <h2>Would You Like to Change the Input?</h2>
+            <button id="ChangeData">Yes</button>
+            <button id="default" style="display: none;">Clear Input</button>
+
+            <!-- Hidden Input Form -->
+            <div id="inputForm" style="display:none; margin-top:20px;">
+                <h3>Update Scores (0–9)</h3>
+
+                <label>Pronunciation:</label>
+                <input type="number" id="pronInput" min="0" max="9"><br><br>
+
+                <label>Fluency:</label>
+                <input type="number" id="fluencyInput" min="0" max="9"><br><br>
+
+                <label>Vocabulary:</label>
+                <input type="number" id="vocabInput" min="0" max="9"><br><br>
+
+                <label>Grammar:</label>
+                <input type="number" id="grammarInput" min="0" max="9"><br><br>
+
+                <label>Overall:</label>
+                <input disabled type="number" id="overallInput"><br><br>
+
+                <button id="updateBtn">Update Scores</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f6f9, #e9edf3);
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 720px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== Headings ===== */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 26px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* ===== Overall Score ===== */
+.overall {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 26px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+#overallScore {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* ===== Skills ===== */
+.skills {
+  margin-bottom: 28px;
+}
+
+.skills > div {
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+/* ===== Progress Bars ===== */
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  transition: width 0.4s ease, background-color 0.3s ease;
+}
+
+/* Default bar color (JS can override) */
+.fill {
+  background-color: #3b82f6;
+}
+
+/* ===== Feedback ===== */
+.feedback {
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  background: #f1f5f9;
+  border-left: 5px solid #3b82f6;
+  border-radius: 8px;
+}
+
+.feedback p {
+  font-size: 14.5px;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+#ChangeData {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+#default {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+#updateBtn {
+  background: #16a34a;
+  color: white;
+  margin-top: 8px;
+}
+
+/* ===== Input Form ===== */
+#inputForm {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+#inputForm label {
+  display: inline-block;
+  width: 120px;
+  font-size: 14px;
+}
+
+#inputForm input {
+  width: 120px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+}
+
+
+body.dark-mode {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+body.dark-mode .container,
+body.dark-mode .overall,
+body.dark-mode .feedback,
+body.dark-mode #inputForm {
+  background: #020617;
+  border-color: #1e293b;
+}
+
+body.dark-mode .bar {
+  background: #1e293b;
+}
+
+body.dark-mode .fill {
+  background-color: #60a5fa;
+}
+
+body.dark-mode button {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* ===== Dark mode disabled input fix ===== */
+body.dark-mode #inputForm input:disabled {
+  background-color: #420745;   /* dark background */
+  color: #94a3b8;              /* soft readable text */
+  border: 1px solid #334155;
+  opacity: 1;                  /* remove browser dimming */
+}
+
+
+/* Dark toggle */
+.dark-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  #overallScore {
+    font-size: 28px;
+  }
+
+  #inputForm label,
+  #inputForm input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+
